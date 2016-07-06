@@ -1,0 +1,47 @@
+﻿@functions{
+    public string GetAntiForgeryToken()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return cookieToken + ":" + formToken;
+    }
+}
+
+<header>
+    <h1>@ViewBag.Title</h1>
+</header>
+
+<div id="main-content">
+
+    <input id="antiForgeryToken" type="hidden" value="@GetAntiForgeryToken()" />
+
+    <article class="todoList">
+        <header>
+            <form data-bind="with: state, validate: true">
+                <div>
+                    <label> Сайт работает штатно </label>
+                    <input title="Сайт работает штатно" type="checkbox" data-bind="checked: working" />
+                </div>
+                <div>
+                    <label> Время начала работ </label>
+                    <input title="Время начала работ" type="date" data-bind="value: workStartTime" />
+                    @*enable: dateInputEnabled*@
+                </div>
+                <p class="error" data-bind="visible: errorMessage, text: errorMessage"></p>
+            </form>
+        </header>
+
+        <p class="error" data-bind="visible: error, text: error"></p>
+    </article>
+
+    <button data-bind="click: saveState">Опубликовать состояние</button>
+
+</div>
+
+{
+    @section scripts {
+        @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/casketstate")
+    }
+}

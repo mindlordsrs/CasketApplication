@@ -1,0 +1,6 @@
+G:\Docs\CV - работа\CasketApplication\TestApp\bin\Debug\TestApp.exe.config
+G:\Docs\CV - работа\CasketApplication\TestApp\bin\Debug\TestApp.exe
+G:\Docs\CV - работа\CasketApplication\TestApp\bin\Debug\TestApp.pdb
+G:\Docs\CV - работа\CasketApplication\TestApp\obj\Debug\TestApp.csprojResolveAssemblyReference.cache
+G:\Docs\CV - работа\CasketApplication\TestApp\obj\Debug\TestApp.exe
+G:\Docs\CV - работа\CasketApplication\TestApp\obj\Debug\TestApp.pdb

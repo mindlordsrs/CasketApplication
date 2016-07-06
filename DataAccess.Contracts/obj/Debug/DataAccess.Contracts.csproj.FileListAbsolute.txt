@@ -1,0 +1,5 @@
+G:\Docs\CV - работа\CasketApplication\DataAccess.Contracts\bin\Debug\DataAccess.Contracts.dll
+G:\Docs\CV - работа\CasketApplication\DataAccess.Contracts\bin\Debug\DataAccess.Contracts.pdb
+G:\Docs\CV - работа\CasketApplication\DataAccess.Contracts\obj\Debug\DataAccess.Contracts.dll
+G:\Docs\CV - работа\CasketApplication\DataAccess.Contracts\obj\Debug\DataAccess.Contracts.pdb
+G:\Docs\CV - работа\CasketApplication\DataAccess.Contracts\obj\Debug\DataAccess.Contracts.csprojResolveAssemblyReference.cache

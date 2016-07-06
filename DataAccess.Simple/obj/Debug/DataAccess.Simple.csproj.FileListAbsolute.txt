@@ -1,0 +1,7 @@
+G:\Docs\CV - работа\CasketApplication\DataAccess.Simple\bin\Debug\DataAccess.Simple.dll
+G:\Docs\CV - работа\CasketApplication\DataAccess.Simple\bin\Debug\DataAccess.Simple.pdb
+G:\Docs\CV - работа\CasketApplication\DataAccess.Simple\bin\Debug\DataAccess.Contracts.dll
+G:\Docs\CV - работа\CasketApplication\DataAccess.Simple\bin\Debug\DataAccess.Contracts.pdb
+G:\Docs\CV - работа\CasketApplication\DataAccess.Simple\obj\Debug\DataAccess.Simple.dll
+G:\Docs\CV - работа\CasketApplication\DataAccess.Simple\obj\Debug\DataAccess.Simple.pdb
+G:\Docs\CV - работа\CasketApplication\DataAccess.Simple\obj\Debug\DataAccess.Simple.csprojResolveAssemblyReference.cache
