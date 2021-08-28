@@ -52,7 +52,7 @@ namespace DataAccess.Simple
         public void PutState(CasketState state)
         {
             if (state == null)
-                throw new ArgumentNullException("state");
+                throw new ArgumentNullException(nameof(state));
 
             casketState = state;
         }
