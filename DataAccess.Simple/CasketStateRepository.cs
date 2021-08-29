@@ -41,7 +41,7 @@ namespace DataAccess.Simple
         }
 
         /// <summary>
-        /// Получить состояние системы
+        /// Get the system state
         /// </summary>
         /// <returns></returns>
         public CasketState GetState()
@@ -50,7 +50,7 @@ namespace DataAccess.Simple
         }
 
         /// <summary>
-        /// Сохранить состояние системы
+        /// Save the system state
         /// </summary>
         /// <param name="state"></param>
         public void PutState(CasketState state)
