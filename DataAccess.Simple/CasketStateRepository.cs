@@ -28,12 +28,16 @@ namespace DataAccess.Simple
         private CasketState casketState = GetDefaultState();
 
         /// <summary>
-        /// Начальное состояние - система работает, работы не запланированы
+        /// Default state - system is in working state, support works aren't planned
         /// </summary>
         /// <returns></returns>
         private static CasketState GetDefaultState()
         {
-            return new CasketState { WorkState = WorkState.Working, WorkStartTime = null, };
+            return new CasketState 
+            {
+                WorkState = WorkState.Working, 
+                WorkStartTime = null, 
+            };
         }
 
         /// <summary>
