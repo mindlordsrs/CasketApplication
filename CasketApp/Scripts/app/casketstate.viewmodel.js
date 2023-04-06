@@ -1,4 +1,4 @@
-﻿//  Инициализируем модель представления
+﻿//  Initialize the view model
 window.casketStateApp.casketStateViewModel = (function (ko, datacontext) {
     
     var state = ko.observable(),
@@ -18,9 +18,9 @@ window.casketStateApp.casketStateViewModel = (function (ko, datacontext) {
         showState = function (vm) {
         };
 
-    datacontext.getState(state, error); // начальная загрузка состояния
+    datacontext.getState(state, error); // Initial state loading
 
-    //  Модель представления состоит из модели состояния, сообщения об ошибке, и метода 'Сохранить состояние'
+    //  View model consists of a state model, error message and 'Save state' method
     return {
         state: state,
         error: error,
@@ -29,5 +29,5 @@ window.casketStateApp.casketStateViewModel = (function (ko, datacontext) {
 
 })(ko, casketStateApp.datacontext);
 
-//  Регистрируем модель представления
+//  Register a view model
 ko.applyBindings(window.casketStateApp.casketStateViewModel);

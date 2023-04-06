@@ -5,11 +5,11 @@
         var self = this;
         data = data || {};
 
-        //  Модель состояния содержит хранимые свойства (признак работоспособности системы и дата начала запланированных работ)
+        //  State model contains persistent fields (health status and scheduled maintenance start date)
         self.working = ko.observable(data.working);
         self.workStartTime = ko.observable(data.workStartTime);
 
-        //  Также содержит сообщение об ошибке и метод для конвертации в Json-представление
+        //  Also it contains error message and json-representation conversion method
         self.errorMessage = ko.observable();
         //self.dateInputEnabled = ko.computed(function () {
         //    return !self.working;

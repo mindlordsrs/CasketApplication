@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 namespace DataAccess.Simple
 {
     /// <summary>
-    /// Пробная реализация репозитория для хранения состояния системы.
-    /// Это синглтон, который хранит состояние впамяти, так что при перезагрузке системы придется публиковать состояние заново.
+    /// Trial implementation of a system state repository.
+    /// This is a singleton that stores the state in memory, so when you reboot the system, you will have to publish the state again.
     /// </summary>
     public class CasketStateRepository : ICasketStateRepository
     {
@@ -28,7 +28,7 @@ namespace DataAccess.Simple
         private CasketState casketState = GetDefaultState();
 
         /// <summary>
-        /// Default state - system is in working state, support works aren't planned
+        /// Default state - system is in working state, maintenance works aren't planned
         /// </summary>
         /// <returns></returns>
         private static CasketState GetDefaultState()

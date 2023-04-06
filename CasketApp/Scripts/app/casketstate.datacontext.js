@@ -1,9 +1,9 @@
 ﻿window.casketStateApp = window.casketStateApp || {};
 
-//  Инициализируем контекст
+//  Initialize the context
 window.casketStateApp.datacontext = (function () {
 
-    //  Контекст умеет сохранять и получать состояние
+    //  Context can save and get the system state
 	var datacontext = {
 		getState: getState,
 		postState: postState
@@ -11,28 +11,28 @@ window.casketStateApp.datacontext = (function () {
 
 	return datacontext;
 
-    //  Получить состояние
+    //  Get system state
 	function getState(stateObservable, errorObservable) {
 		return ajaxRequest("get", stateUrl())
             .done(getSucceeded)
             .fail(getFailed);
 
-        //  Создать модель состояния и вернуть её
+        //  Create state model and return it
 		function getSucceeded(data) {
 		    var state = new createState(data);
 			stateObservable(state);
 		}
 
-        //  Вернуть сообщение об ошибке
+        //  Get error message
 		function getFailed() {
 			errorObservable("Error retrieving state.");
 		}
 	}
 	function createState(data) {
-		return new datacontext.casketstate(data); // casketstate определен в casketstate.model.js
+		return new datacontext.casketstate(data); // casketstate is defined in casketstate.model.js
 	}
 
-    //  Сохранить состояние
+    //  Save system state
 	function postState(state) {
 		clearErrorMessage(state);
 		return ajaxRequest("post", stateUrl(), state)
@@ -46,7 +46,7 @@ window.casketStateApp.datacontext = (function () {
 
 	// Private
 	function clearErrorMessage(entity) { entity.errorMessage(null); }
-	function ajaxRequest(type, url, data, dataType) { // Хелпер для отправки ajax запросов
+	function ajaxRequest(type, url, data, dataType) { // ajax request send helper
 		var options = {
 			dataType: dataType || "json",
 			contentType: "application/json",
@@ -62,7 +62,7 @@ window.casketStateApp.datacontext = (function () {
 		}
 		return $.ajax(url, options);
 	}
-	// Адрес webapi, предоставляющего возможность управления состоянием системы
+	// Url of a webapi, allowing to manage the system state
 	function stateUrl() { return "/api/casketstate/"; }
 	
 

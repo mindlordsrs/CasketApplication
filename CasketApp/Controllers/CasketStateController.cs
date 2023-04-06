@@ -11,23 +11,23 @@ using System.Web.Http;
 namespace CasketApp.Controllers
 {
     /// <summary>
-    /// Контроллер состояния системы
-    /// Предоставляет информацию и сохраняет состояние.
-    /// Контроллер является слоем бизнес-логики. В нашем случае это оправданно, так как логики почти нет.
+    /// System state controller
+    /// Exposes information and saves the state.
+    /// Controller is a part of business-logic layer. It is reasonable in our case as we have very small amount of business logic.
     /// </summary>
     public class CasketStateController : ApiController
     {
         private readonly ICasketStateRepository casketStateRepository;
 
         public CasketStateController()
-            /// TODO    Использовать DI, текущая реализация приводит в ненужным ссылкам на сборку реализации хранилища, и не позволяет подменять эту реализацию
+            /// TODO    Use DI, current implementation requires unnesessary references to storage implementation asembly and doesn't allow to mock this implementation
             : this(DataAccess.Simple.CasketStateRepository.Instance)
         {
 
         }
         
         /// <summary>
-        /// Это правильный конструктор - репозиторий должен передаваться снаружи как зависимость
+        /// This is the right ctor - repository dependency should be injected from outside
         /// </summary>
         /// <param name="casketStateRepository"></param>
         public CasketStateController(ICasketStateRepository casketStateRepository)
@@ -53,9 +53,9 @@ namespace CasketApp.Controllers
 
             var state = value.ToDataEntity();
 
-            //  Если система не работает, то нет смысла сохранять дату начала работ
-            //  Это бизнес-логика, и её было бы неплохо протестить.
-            //      Для этого можно было бы создать сервис, который выполнял бы работу, или реализовать её внутри доменного объекта состояния (это не ДТО и не объект слоя данных).
+            //  If system isn't working then there is no sence in saving scheduled maintenance start date
+            //  This is a business logic and should be tested separately.
+            //      To do this one could create a service performing this work, or implement it inside domain system state entity (not a dto and not a data-layer object).
             if (state.WorkState == WorkState.NotWorking)
                 state.WorkStartTime = null;
 

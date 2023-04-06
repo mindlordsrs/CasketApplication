@@ -19,12 +19,12 @@
         <header>
             <form data-bind="with: state, validate: true">
                 <div>
-                    <label> Сайт работает штатно </label>
-                    <input title="Сайт работает штатно" type="checkbox" data-bind="checked: working" />
+                    <label> Website is working </label>
+                    <input title="Website is working" type="checkbox" data-bind="checked: working" />
                 </div>
                 <div>
-                    <label> Время начала работ </label>
-                    <input title="Время начала работ" type="date" data-bind="value: workStartTime" />
+                    <label> Scheduled maintenance start time </label>
+                    <input title="Scheduled maintenance start time" type="date" data-bind="value: workStartTime" />
                     @*enable: dateInputEnabled*@
                 </div>
                 <p class="error" data-bind="visible: errorMessage, text: errorMessage"></p>
@@ -34,7 +34,7 @@
         <p class="error" data-bind="visible: error, text: error"></p>
     </article>
 
-    <button data-bind="click: saveState">Опубликовать состояние</button>
+    <button data-bind="click: saveState">Publish state</button>
 
 </div>
 

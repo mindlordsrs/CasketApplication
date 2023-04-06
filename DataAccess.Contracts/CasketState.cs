@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DataAccess.Contracts
 {
     /// <summary>
-    /// Состояние работоспособности
+    /// System health status
     /// </summary>
     public enum WorkState
     {
@@ -16,18 +16,18 @@ namespace DataAccess.Contracts
     }
 
     /// <summary>
-    /// Состояние системы
+    /// System state
     /// </summary>
     public class CasketState
     {
         /// <summary>
-        /// Состояние работоспособности
+        /// System health status
         /// </summary>
         public WorkState WorkState { get; set; }
 
         /// <summary>
-        /// Время начала запланированных работ.
-        /// Может быть не указано
+        /// Scheduled maintenance time.
+        /// Can be null
         /// </summary>
         public DateTime? WorkStartTime { get; set; }
     }

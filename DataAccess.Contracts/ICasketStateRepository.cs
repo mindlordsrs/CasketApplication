@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 namespace DataAccess.Contracts
 {
     /// <summary>
-    /// Хранилище состония системы
+    /// System state storage
     /// </summary>
     public interface ICasketStateRepository
     {
         /// <summary>
-        /// Получить состояние системы
+        /// Get the system state
         /// </summary>
         /// <returns></returns>
         CasketState GetState();
         
         /// <summary>
-        /// Сохранить состояние системы
+        /// Save system state
         /// </summary>
         /// <param name="state"></param>
         void PutState(CasketState state);

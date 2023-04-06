@@ -6,7 +6,7 @@ using System.Web;
 namespace CasketApp.Models
 {
     /// <summary>
-    /// ДТО для передачи информации о состоянии системы
+    /// dto for system state date transfer
     /// </summary>
     public class CasketStateDto
     {
@@ -16,7 +16,7 @@ namespace CasketApp.Models
         }
         
         /// <summary>
-        /// Создание из объекта слоя данных
+        /// Create using data-layer object
         /// </summary>
         /// <param name="state"></param>
         public CasketStateDto(DataAccess.Contracts.CasketState state)
@@ -29,17 +29,17 @@ namespace CasketApp.Models
         }
 
         /// <summary>
-        /// Признак работоспособности системы
+        /// System health status
         /// </summary>
         public bool Working { get; set; }
 
         /// <summary>
-        /// Время начала запланированных работ
+        /// Maintenance start date
         /// </summary>
         public DateTime? WorkStartTime { get; set; }
 
         /// <summary>
-        /// Преобразование в объект слоя данных
+        /// Conversion to date-laer object
         /// </summary>
         /// <returns></returns>
         public DataAccess.Contracts.CasketState ToDataEntity()
