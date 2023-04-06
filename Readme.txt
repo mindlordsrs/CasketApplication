@@ -1,15 +1,15 @@
-﻿Архив содержит исходный код WEB-приложения и тестового приложения.
-Дизайн:
-    WEB приложение содержит слой доступа к данным, слой логики и слой представления.
-    Слой доступа к данным имеет свой контракт, описанный в проекте DataAccess.Contracts. Реализация - DataAccess.Simple (хранение состояния в памяти).
-    Слой логики - это контроллер страницы приложения (HomeController) и контроллер WEB API (CasketStateController)
-    Слой представления - это jscript, выполняющийся на стороне клиента.
-Данные о состоянии системы предоставляются посредством веб-интерфейса. На выходе Json следующего формата:
+The archive contains the source code of the WEB application and the test application.
+Design:
+     The WEB application contains a data access layer, a logic layer and a presentation layer.
+     The data access layer has its own contract, described in the DataAccess.Contracts project. Implementation - DataAccess.Simple (keeping state in memory).
+     The logic layer is the application page controller (HomeController) and the WEB API controller (CasketStateController)
+     The presentation layer is jscript running on the client side.
+System status data is provided through the web interface. The output is Json in the following format:
 {
-  "working" = <bool>,
-  "workStartTime" = <nullable datetime>
+   "working" = <bool>,
+   "workStartTime" = <nullable datetime>
 }
-Адрес: <site>/api/casketstate
+Address: <site>/api/casketstate
 
-PS Тестов нет, централизованой обработки исключений нет, внедрение зависимостей не использовано. И много чего хорошего тоже не сделано.
-Любой качественный проект, конечно, должен всё это включать, но приходится балансировать между качеством и затраченными ресурсами.
+PS No tests, no centralized exception handling, no dependency injection. And a lot of good things have not been done either.
+Any high-quality project, of course, should include all this, but you have to balance between quality and the resources spent.
