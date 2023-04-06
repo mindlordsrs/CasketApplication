@@ -1,4 +1,7 @@
-The archive contains the source code of the WEB application and the test application.
+The archive contains the source code of the WEB application (CasketApp project) and the test application (TestApp project).
+CasketApp allows to manage system state by support staff
+TestApp allows users to get informed about system status
+
 Design:
      The WEB application contains a data access layer, a logic layer and a presentation layer.
      The data access layer has its own contract, described in the DataAccess.Contracts project. Implementation - DataAccess.Simple (keeping state in memory).
